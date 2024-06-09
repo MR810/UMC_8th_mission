@@ -1,0 +1,683 @@
+/* General Styles */
+.root-wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.header-container {
+    background-color: #21244b;
+}
+
+.header-wrap {
+    height: 70px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.header-left-wrap {
+    display: flex;
+}
+.header-left-wrap ul {
+    display: flex;
+}
+.header-left-wrap li {
+    margin-right: 0;
+    padding: 0;
+}
+.header-nav-item {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.header-left-wrap li:hover {
+    transform: scale(1.05); 
+}
+
+.header-nav-item:hover {
+    cursor: pointer;
+}
+
+.login-button {
+    color: rgb(255, 213, 76);
+    font-weight: 800;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-family: sans-serif;
+}
+
+.logo-link {
+    color: white;
+    text-decoration: none;
+}
+
+.logo-image {
+    width: auto;
+    height: auto;
+    color: white;
+    border: none;
+}
+
+.log-button {
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+    border: none;
+    background: none;
+    color: yellow;
+    font-family: sans-serif;
+    width: 100px;
+    font-weight: 800;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 15px;
+    width: 100px;
+    font-family: sans-serif;
+}
+
+.logout-button {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.nav-link:hover,
+.logout-button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.mainPage-body {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    height: 400px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mainPage-inputSection {
+    font-family: sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    width: 100%;
+    background-color: #22254b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s ease;
+    padding-top: 100px;
+}
+
+.button {
+    background: #ffe32a;
+    border: 2px;
+    border-radius: 100%;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.mainPage-inputSection input {
+    max-width: 500px;
+    height: 30px;
+    font-size: 20px;
+    border-color: #ffffff;
+    border-width: 1px;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 10px 0; /* 추가: 입력 박스와 버튼 사이에 여백을 추가합니다 */
+}
+
+.movies-container {
+    background-color: #21244b;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.app-container a {
+    max-width: 500px;
+    justify-content: center;
+}
+
+.movie-card {
+    width: calc(33.333% - 20px);
+    margin: 10px;
+    background-color: #373b69;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.app-container {
+    background-color: #22254b;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.app-container a {
+    max-width: 500px;
+    justify-content: center;
+}
+
+.movie-container {
+    width: 250px;
+    margin: 16px;
+    background-color: #373b69;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.movie-container .overview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.movie-container:hover .overview {
+    display: flex;
+}
+
+.overview p {
+    margin: 0;
+    max-width: 80%;
+    font-family: sans-serif;
+}
+
+.movie-container img {
+    max-width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.movie-info h4 {
+    margin: 0;
+}
+
+.movie-info span {
+    margin: 3px;
+}
+
+/* Movie Detail Page */
+.movie-detail-container {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(33, 36, 75, 0.3);
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.movie-detail-container h4 {
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+    padding-bottom: 25px;
+}
+
+.movie-detail-container p {
+    padding-bottom: 25px;
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.movie-detail-content {
+    margin-left: 100px;
+    position: relative; /* 상대 위치 설정 */
+    z-index: 1; /* 내용은 오버레이보다 위에 위치 */
+    padding: 20px;
+    color: white;
+}
+
+.movie-detail-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 36, 75, 0.85);
+    z-index: 0;
+}
+
+.poster-container {
+    margin-left: 200px;
+    position: relative;
+    width: 90%; /* 원하는 크기로 조정 */
+    height: 100%; /* 부모 요소의 높이에 맞게 설정 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; /* overlay보다 위에 표시되도록 설정 */
+}
+
+.poster-container img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.pageAll {
+    background-color: #21244b;
+    width: 100%;
+    min-height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page {
+    width: 100%;
+    max-width: 700px;
+    padding: 0 20px;
+    background-color: #21244b;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.titleWrap {
+    margin-top: 87px;
+    font-size: 26px;
+    font-weight: 700;
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.contentWrap {
+    margin-top: 26px;
+    flex: 1;
+    width: 100%;
+    max-width: 700px;
+}
+
+.inputTitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: white;
+}
+
+.inputWrap {
+    display: flex;
+    border-radius: 50px;
+    padding: 16px;
+    margin-top: 8px;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.inputWrap:focus-within {
+    border: 1px solid;
+}
+
+.input {
+    width: 100%;
+    max-width: 700px;
+    outline: none;
+    border: none;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.input::placeholder {
+    color: #dadada;
+}
+
+.errorMessageWrap {
+    margin-top: 6px;
+    color: red;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+
+.login-go {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.bottomButton {
+    width: 100%;
+    max-width: 700px;
+    height: 48px;
+    outline: none;
+    border: none;
+    margin-top: 70px;
+    background-color: white;
+    border-radius: 65px;
+    color: black;
+    font-size: 17px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.bottomButton:disabled {
+    background-color: white;
+    color: #dadada;
+}
+
+.credits h4 {
+    margin-top: 20px;
+}
+
+.credits ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.credits ul li {
+    margin-bottom: 5px;
+}
+
+.cast-list .cast-item,
+.crew-list .crew-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.cast-list .cast-item img,
+.crew-list .crew-item img {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.actor-info {
+    color: white;
+    font-family: sans-serif;
+}
+
+.credit-name,
+.character-name {
+    font-size: 14px;
+}
+
+.character-name {
+    font-size: 13px;
+}
+
+/* Sidebar Styles */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+    position: fixed; /* Add fixed positioning */
+    top: 20px; /* Adjust top position */
+    right: 20px; /* Adjust right position */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+.sidebar {
+    display: none;
+    position: fixed; /* Change to fixed positioning */
+    top: 0;
+    right: 0; /* Ensure it appears on the right */
+    height: 100%;
+    width: 250px;
+    background-color: #21244b;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    transform: translateX(100%);
+    z-index: 999; /* Ensure it is above other elements but below menu-icon */
+}
+
+
+
+.sidebar a,
+.sidebar .log-button {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    display: block;
+    margin: 5px 0;
+}
+
+
+.sidebar a:hover,
+.sidebar .log-button:hover {
+    background-color: #373b69;
+}
+
+.sidebar.active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateX(0);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .header-wrap.active .nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .mainPage-inputSection input {
+        max-width: 100%;
+    }
+
+    .movies-container {
+        flex-direction: column;
+    }
+
+    .movie-card {
+        width: 100%;
+    }
+
+    .app-container {
+        flex-direction: column;
+    }
+
+    .movie-container {
+        width: 100%;
+    }
+
+    .movie-detail-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .movie-detail-content {
+        max-width: 100%;
+    }
+
+    .poster-container {
+        margin: 20px 0;
+        max-width: 100%;
+    }
+
+    .contentWrap,
+    .inputWrap,
+    .bottomButton {
+        max-width: 100%;
+    }
+}
+
+/* Additional Responsive Design */
+@media (max-width: 480px) {
+    .header-wrap {
+        padding: 10px;
+    }
+
+    .header-wrap .logo-link {
+        margin-bottom: 10px;
+    }
+
+    .nav-link,
+    .log-button {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+
+    .mainPage-body {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .mainPage-inputSection {
+        font-size: 30px;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .movie-card {
+        width: 100%;
+        margin: 5px;
+    }
+
+    .movie-info {
+        padding: 10px;
+    }
+
+    .movie-info h4 {
+        font-size: 18px;
+    }
+
+    .movie-info span {
+        font-size: 14px;
+    }
+
+    .movie-detail-container {
+        padding: 10px;
+    }
+
+    .movie-detail-content {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .poster-container {
+        margin: 10px 0;
+    }
+
+    .contentWrap,
+    .inputWrap,
+    .bottomButton {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mainPage-inputSection {
+        font-size: 40px;
+    }
+
+    .mainPage-inputSection input {
+        max-width: 100%;
+    }
+}
+@media (min-width: 769px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-link {
+        margin-bottom: 20px;
+        font-size: 18px;
+    }
+}
